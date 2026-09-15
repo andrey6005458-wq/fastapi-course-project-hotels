@@ -1,12 +1,22 @@
 import uvicorn
-from fastapi import FastAPI, Query, Body
+from fastapi import FastAPI, Query, Body, Depends
+from fastapi.security import OAuth2PasswordBearer
+
 app = FastAPI()
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
 
 hotels = [
     {"id": 1, "title": "Sochi", "name": "sochi"},
     {"id": 2, "title": "Dubai", "name": "dubai"},
     {"id": 3, "title": "Moscow", "name": "moscow"},
 ]
+
+@app.get("/items/")
+async def read_items(token: Annotated[str, Depends(oauth2_scheme)]):
+    return {"token": token}
+
 
 @app.get("/hotels")
 def get_hotels(
