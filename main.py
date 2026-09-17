@@ -13,6 +13,7 @@ hotels = [
     {"id": 1, "title": "Sochi", "name": "sochi"},
     {"id": 2, "title": "Dubai", "name": "dubai"},
     {"id": 3, "title": "Moscow", "name": "moscow"},
+    {"id": 4, "title": "Crimea", "name": "yalta"},
 ]
 
 @app.get("/items/")
