@@ -3,3 +3,31 @@ __pycache__/
 *.pyc
 .idea/
 .DS_Store
+
+# === Дополнительно ===
+*.py[cod]              # .pyc, .pyo, .pyd
+*$py.class             # Jython
+.Python                # build artifacts
+build/                 # сборка
+dist/                  # дистрибутив
+*.egg-info/            # metadata пакета
+
+# === Тесты ===
+.pytest_cache/
+.coverage
+htmlcov/
+
+# === MyPy ===
+.mypy_cache/
+
+# === Environment ===
+.env
+.env.local
+
+# === IDE ===
+.vscode/
+*.swp
+*.iml
+
+# === OS ===
+Thumbs.db
