@@ -1,3 +1,5 @@
+from typing import Annotated
+
 import uvicorn
 from fastapi import FastAPI, Query, Body, Depends
 from fastapi.security import OAuth2PasswordBearer
